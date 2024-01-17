@@ -11,6 +11,11 @@ interface PersonInterface {
 	genderProps: PersonGender; //interface can use another interface
 }
 
+interface AnimalProp extends PersonInterface {
+	name: string;
+	furType: string;
+}
+
 // class Person implements PersonInterface {
 // 	name: string;
 // 	age: number;
