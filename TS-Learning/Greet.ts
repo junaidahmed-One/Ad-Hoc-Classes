@@ -16,6 +16,18 @@ interface AnimalProp extends PersonInterface {
 	furType: string;
 }
 
+//types - almost same as interface, connot be extended other types or interfaces, but internally can have types or interface
+type PersonType = {
+	name: string;
+	age: number;
+	gender: PersonGender;
+};
+
+function greetType(person: PersonType) {
+	return `hi this is ${person.name} and age ${person.age} using types`;
+}
+
+console.log(greetType({ name: "Junaid", age: 90 }));
 // class Person implements PersonInterface {
 // 	name: string;
 // 	age: number;
